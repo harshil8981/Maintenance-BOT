@@ -1,0 +1,51 @@
+{
+    "name": "Maintenance-BOT",
+    "description": "Telegram BOT to Notify Users that the is under Maintenance-BOT",
+    "keywords":["telegram", "bot", "maintenance", "best"],
+    "website": "https://github.com/harshil8981",
+    "logo" : "https://graph.org/file/8f1a853725022f24f5031.jpg",
+    "repository": "https://github.com/harshil8981/Maintenance-BOT",
+     "env":{
+         "BOT_TOKEN":{
+             "description" : "Your Telegram Bot Token from @BotFather",
+             "value" : "",
+             "required" : true
+         },
+         "API_ID":{
+            "description" : "Your api_id from my.telegram.org",
+            "value" : "",
+            "required" : true 
+        },
+        "API_HASH":{
+            "description" : "Your api_hash from my.telegram.org",
+            "value" : "",
+            "required" : true
+        },
+        "BOT_TEXT":{
+            "description" : "Text to Show when User Messages the BOT",
+            "value" : "Hello {} , This Bot Is Currently Under Maintenance.\n\nYou Can't Use This Bot Right Now.\n\nI Will Post a Message On This Updates Channel If This Bot Is Up.",
+            "required" : true
+        },
+        "CHANNEL_LINK":{
+            "description" : "Link of Your Updates Channel",
+            "value" : "",
+            "required" : true
+        },
+        "DEV_ID":{
+            "description" : "Your telegram username without @",
+            "value" : "",
+            "required" : true
+        }
+     },
+     "buildpacks": [
+         {
+             "url" : "heroku/python"
+         }
+     ],
+     "formation" : {
+         "worker" : {
+             "quantity" : 1,
+             "size" : "eco"
+         }
+     }
+}
